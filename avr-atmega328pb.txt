@@ -1,0 +1,43 @@
+[constants]
+prefix = 'avr'
+
+[binaries]
+c           = prefix + '-gcc'
+cpp         = prefix + '-g++'
+ld          = prefix + '-ld'
+ar          = prefix + '-ar'
+as          = prefix + '-as'
+size        = prefix + '-size'
+objdump     = prefix + '-objdump'
+objcopy     = prefix + '-objcopy'
+readelf     = prefix + '-readelf'
+strip       = prefix + '-strip'
+
+[built-in options]
+b_staticpic = 'false'
+default_library = 'static'
+
+c_args = [
+    '-Os',
+    '-mmcu=atmega328pb',
+    '-ffunction-sections',
+    '-fdata-sections',
+    '-flto', 
+    '-fno-fat-lto-objects',
+    ]
+
+c_link_args = [
+    '-mmcu=atmega328pb',
+    '-Wl,--gc-sections',
+    '-static',
+    '-flto',
+    '-fuse-linker-plugin',
+    '-Wl,--no-warn-rwx-segment',
+    '-Wl,--print-memory-usage',
+    ]
+
+[host_machine]
+system     = 'avr-generic'
+cpu_family = 'avr'
+cpu        = 'avr-generic'
+endian     = 'little'
