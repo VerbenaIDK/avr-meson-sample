@@ -40,7 +40,7 @@ c_link_args = [
     ]
 
 [host_machine]
-system     = 'avr-generic'
+system     = 'avr-atmega328pb'
 cpu_family = 'avr'
-cpu        = 'avr-generic'
+cpu        = 'avr-atmega328pb'
 endian     = 'little'
