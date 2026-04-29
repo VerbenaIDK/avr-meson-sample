@@ -1,4 +1,3 @@
-#define __AVR_ATmega328PB__
 #define F_CPU 16000000UL
 
 #include <avr/io.h>
