@@ -13,6 +13,9 @@ objcopy     = prefix + '-objcopy'
 readelf     = prefix + '-readelf'
 strip       = prefix + '-strip'
 
+[properties]
+skip_sanity_check = true # sanity checks are not so sane.
+
 [built-in options]
 b_staticpic = 'false'
 default_library = 'static'

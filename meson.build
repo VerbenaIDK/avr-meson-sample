@@ -1,5 +1,5 @@
 project('avr-sample', 'c',
-  version : '20260429_v001',
+  version : '20260429_v002',
   default_options : ['buildtype=minsize'])
 
 # Includes and subdirs
